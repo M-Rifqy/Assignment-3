@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Mea+Culpa&family=Monoton&family=Montserrat:ital,wght@1,900&family=Orbitron&family=Play&family=Poppins:wght@200;300;400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: hsl(0, 100%, 100%);
+}
+
+/* Animations */
+@keyframes slideY {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideX {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Scroll Bar */
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background: hsl(0, 100%, 100%);
+  border-left: 1px solid hsl(0, 0%, 93%);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 80%);
+  border: 3px solid hsl(0, 100%, 100%);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 70%);
+}
+
+/* Navigation Bar */
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+  animation: 1s ease-out 0s 1 slideY;
+}
+
+.nav-container .logo {
+  float: left;
+}
+.nav-container .logo img {
+  margin-top: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  transition: 0.5s ease;
+}
+
+.nav-container .logo img:hover {
+  box-shadow: 5px 5px 28px 5px rgba(0, 0, 0, 0.35);
+}
+
+.nav-container .nav-item {
+  float: right;
+  margin-top: 10px;
+}
+
+.nav-container .nav-item li {
+  float: left;
+  margin-left: 20px;
+  display: block;
+}
+
+.nav-container .nav-item li {
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+
+.nav-container .nav-item li a {
+  padding: 10px 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+
+.nav-container .nav-item li:hover a {
+  background-color: #000000;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.nav-container .nav-item .active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Video */
+.video {
+  display: flex;
+  justify-content: center;
+  animation: 1s ease-out 0s 1 slideX;
+}
+
+.video iframe {
+  height: 400px;
+  width: 600px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 28px 5px rgba(0, 0, 0, 0.35);
+}
+
+/* Footer */
+.footer {
+  margin-top: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  border-top: 1px solid #e2e7e9;
+}
+
+.footer p {
+  margin: auto;
+}
+
+.footer p a {
+  text-decoration: none;
+  color: rgb(27, 24, 24);
+  font-size: 19px;
+  transition: all 0.2s;
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+.tooltip .tooltiptext {
+  font-size: 12px;
+  visibility: hidden;
+  width: 150px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* About */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+  padding-left: 20%;
+  padding-right: 20%;
+  font-family: 'Quicksand', sans-serif;
+  animation: 1s ease-out 0s 1 slideY;
+}
+
+/* Contact */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  animation: 1s ease-out 0s 1 slideX;
+}
+
+.contact-container iframe {
+  border-radius: 10px;
+  box-shadow: 5px 5px 28px 5px rgba(0, 0, 0, 0.35);
+}
